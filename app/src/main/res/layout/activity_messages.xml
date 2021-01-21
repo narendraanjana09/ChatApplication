@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MessagesActivity"
+    android:orientation="vertical"
+    android:background="@color/Dark"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:id="@+id/nameLayout"
+        >
+        <TextView
+            android:id="@+id/goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="goback"
+            android:background="@drawable/goback"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toRightOf="@id/goBack"
+            android:layout_marginStart="5dp"
+
+            android:layout_centerVertical="true"
+            android:clickable="true"
+
+            android:onClick="getProfileActivity"
+            app:civ_border_color="@color/Main"
+            app:civ_border_width="1dp"
+            android:src="@drawable/person"
+            android:layout_marginLeft="5dp" />
+
+
+        <TextView
+            android:id="@+id/nametextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imageview"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:onClick="getProfileActivity"
+            android:text="Captain"
+            android:textColor="@color/Main"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Black"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/imageview"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_View"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/nameLayout"
+        android:layout_above="@+id/MessageLayout"
+
+        />
+    <LinearLayout
+        android:id="@+id/MessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+
+        >
+
+        <EditText
+            android:id="@+id/messagetxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.86"
+            android:hint="Message"
+            android:textColor="@color/Main"
+            android:textColorHint="@color/Main"
+            android:textSize="22sp"
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:onClick="showButtons"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:src="@drawable/add" />
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/ButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_above="@id/MessageLayout"
+       android:layout_alignParentRight="true"
+       android:layout_marginBottom="10dp"
+       android:layout_marginEnd="-140dp"
+       android:layout_marginRight="-140dp"
+       >
+
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/addImageButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:clickable="true"
+           android:onClick="addImage"
+           android:layout_marginEnd="5dp"
+           android:src="@drawable/addimage"
+           android:layout_marginRight="5dp" />
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/addVideoButton"
+           android:layout_width="wrap_content"
+           android:onClick="addVideo"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:clickable="true"
+           android:src="@drawable/addvideo" />
+
+
+   </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:visibility="gone" />
+
+</RelativeLayout>

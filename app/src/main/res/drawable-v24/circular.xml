@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="oval"
+    >
+    <!-- The fill color -->
+    <solid android:color="@color/Dark"
+         />
+    <corners
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="30dp"
+        android:topLeftRadius="30dp"
+        android:topRightRadius="30dp" />
+
+
+    <!-- Just to add a border -->
+    <stroke
+        android:color="@color/Main"
+        android:width="1dp"
+        />
+</shape>

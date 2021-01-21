@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Dark"
+    android:padding="5dp"
+    android:id="@+id/usersRecyclerLayout"
+    >
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageview"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:clickable="true"
+
+        android:src="@drawable/person"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        app:civ_border_color="@color/Main"
+        app:civ_border_width="1dp"
+        android:layout_marginLeft="15dp" />
+
+
+    <ImageView
+        android:id="@+id/message_View"
+        android:layout_width="30dp"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/message"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/nametextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toRightOf="@id/imageview"
+        android:text="Saturn"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+
+        android:textColor="@color/Main"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:id="@+id/lastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="18dp"
+        android:layout_below="@+id/nametextview"
+
+        android:layout_toRightOf="@id/imageview"
+        android:layout_marginStart="15dp"
+        android:textAllCaps="false"
+        android:textColor="@color/Main"
+        android:textSize="15sp"
+        android:visibility="visible"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/numberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nametextview"
+
+        android:textAllCaps="false"
+        android:textColor="@color/Main"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Main"
+        android:textSize="15sp"
+
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/numberTextView"
+        android:layout_marginTop="10dp"
+        android:background="@color/Black" />
+
+</RelativeLayout>

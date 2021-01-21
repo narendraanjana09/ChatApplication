@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp"
+    android:id="@+id/chatRelativeLayout">
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        >
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@drawable/chatbackgroundleft"
+            >
+
+
+
+
+        <TextView
+            android:id="@+id/showMessage"
+            android:layout_width="wrap_content"
+            android:maxWidth = "200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/Main"
+            android:textSize="18sp"
+            android:layout_marginLeft="5dp" />
+        <ImageView
+            android:id="@id/imageview"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth = "200dp"
+            android:layout_height="wrap_content"
+            android:maxHeight = "150dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp" />
+            <ImageView
+                android:id="@+id/download"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_centerInParent="true"
+                />
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width = "0dp"
+                android:layout_height = "0dp"
+
+                android:layout_centerInParent="true"
+
+
+                android:paddingTop = "5dp"
+                android:scaleType = "centerCrop"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/layout"
+
+            android:text="2:23"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Main"
+            android:textSize="10sp"
+            android:gravity="start" />
+        <ProgressBar
+            android:id="@+id/downloadProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+
+            android:layout_alignBottom="@+id/layout"
+            android:max="100"
+
+            android:layout_height="7dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

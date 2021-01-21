@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "803796639516",
+    "firebase_url": "https://baatein-30241.firebaseio.com",
+    "project_id": "baatein-30241",
+    "storage_bucket": "baatein-30241.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803796639516:android:292705852728c80419a4d9",
+        "android_client_info": {
+          "package_name": "com.example.baatein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803796639516-bgc2qfnrmog3glodksvguj4o4uhulf88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.baatein",
+            "certificate_hash": "a44e817c5fbc529bef0acd0fb1061ec7b02062ec"
+          }
+        },
+        {
+          "client_id": "803796639516-t1eehp8r6avuplib5psgg11ukdoui5b0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOo4OFLk3DbHBcupUCAge0vFP7flnG4qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803796639516-t1eehp8r6avuplib5psgg11ukdoui5b0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

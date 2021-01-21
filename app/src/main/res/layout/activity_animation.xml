@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark"
+    tools:context=".Activities.AnimationActivity">
+  <com.hbb20.CountryCodePicker
+      android:id="@+id/ccp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"
+      android:layout_weight="1"
+
+
+      android:background="@drawable/edittext_shape"
+
+       />
+  <LinearLayout
+      android:id="@+id/phoneNumberLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/edittext_shape"
+     android:layout_below="@+id/ccp"
+      android:layout_marginTop="30dp"
+      android:padding="5dp"
+      >
+    <com.hbb20.CountryCodePicker
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        app:ccp_contentColor="@color/white"
+        app:ccp_textSize="16sp"
+        android:layout_marginTop="5dp"
+
+        />
+
+    <EditText
+        android:id="@+id/numberTextView"
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+
+
+        android:hint="Enter Mobile Number"
+        android:inputType="phone"
+        android:textAlignment="center"
+
+        android:textColor="@color/Main"
+        android:textColorHint="@color/ExtraWhite"
+        android:textSize="22sp" />
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:text="Record"
+      android:onClick="record"
+      android:textSize="40sp"
+      />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width = "250dp"
+        android:layout_height = "400dp"
+       android:layout_centerInParent="true"
+
+        android:paddingTop = "5dp"
+        android:scaleType = "centerCrop"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerInParent="true"
+        android:max="100"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+</RelativeLayout>

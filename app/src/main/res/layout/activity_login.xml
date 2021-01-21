@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Dark"
+    tools:context=".Activities.loginActivity"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/login_top"
+        >
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Welcome!"
+            android:textSize="40sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/ExtraWhite"
+            />
+
+
+    </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="5"
+    android:padding="10dp"
+
+    >
+    <LinearLayout
+        android:id="@+id/phoneNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_shape"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:padding="5dp"
+        >
+       <com.hbb20.CountryCodePicker
+           android:layout_width="0dp"
+           android:layout_weight="3"
+           android:layout_height="wrap_content"
+           app:ccp_contentColor="@color/Main"
+           android:layout_marginTop="5dp"
+           app:ccp_textSize="16sp"
+
+           />
+
+        <EditText
+            android:id="@+id/numberTextView"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+
+
+            android:hint="Enter Mobile Number"
+            android:inputType="phone"
+            android:textAlignment="center"
+
+            android:textColor="@color/Main"
+            android:textColorHint="@color/Main"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/codeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Code"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        android:background="@drawable/edittext_shape"
+        android:textColor="@color/Main"
+        android:textColorHint="@color/Main"
+        android:textSize="25sp"
+         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sencodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneNumberLayout"
+        android:layout_marginTop="77dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:onClick="sendcode"
+        android:src="@drawable/next_arrow"
+        android:textAllCaps="false"
+
+
+        />
+    <TextView
+        android:id="@+id/goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:onClick="goback"
+        android:background="@drawable/goback"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>
+    </LinearLayout>
+
+
+
